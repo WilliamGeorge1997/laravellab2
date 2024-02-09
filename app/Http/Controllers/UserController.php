@@ -34,7 +34,7 @@ class UserController extends Controller
      */
     public function show(string $id)
     {
-        
+
         if($user = User::find($id)){
             return view('users.show', ['user'=> $user]);
         }else
@@ -46,7 +46,9 @@ class UserController extends Controller
      */
     public function edit(string $id)
     {
-        return view('users.edit');
+        $user = User::find($id);
+        return view('users.edit',['user' => $user ] );
+        
     }
 
     /**
