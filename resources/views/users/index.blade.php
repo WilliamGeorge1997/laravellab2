@@ -19,7 +19,7 @@
             <td><a href="users/{{ $user->id }}" class="text-decoration-none">{{ $user->name }}</a></td>
             <td>{{ $user->email }}</td>
             <td>
-                <a href="{{ route("users.index") }}/{{ $user->id }}/edit" class="btn btn-primary">Edit</a>
+                <a href="users/{{ $user->id }}/edit" class="btn btn-primary">Edit</a>
                 <a href="" class="btn btn-danger">Delete</a>
             </td>
             <td></td>
